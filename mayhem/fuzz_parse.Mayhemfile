@@ -1,0 +1,10 @@
+project: sage
+target: fuzz-parse
+
+image: ghcr.io/nottirb/sage:latest
+
+cmds:
+    - cmd: /fuzz_parse
+
+testsuite:
+    - file://mayhem/testsuite/fuzz_parse

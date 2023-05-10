@@ -1,0 +1,25 @@
+[package]
+name = "fuzz_sage"
+version = "0.1.0"
+edition = "2021"
+
+[package.metadata]
+cargo-fuzz = true
+
+[dependencies]
+honggfuzz = "0.5.55"
+serde_json = "1.0.96"
+
+[dependencies.sage-core]
+path = "../crates/sage"
+
+[workspace]
+members = ["."]
+
+[[bin]]
+name = "fuzz_database"
+path = "fuzz_targets/fuzz_database.rs"
+
+[[bin]]
+name = "fuzz_parse"
+path = "fuzz_targets/fuzz_parse.rs"

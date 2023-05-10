@@ -1,8 +1,6 @@
 project: sage
 target: fuzz-database
 
-image: ghcr.io/nottirb/sage:latest
-
 cmds:
     - cmd: /fuzz_database
 
